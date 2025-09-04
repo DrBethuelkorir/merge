@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background: #4caf50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AgroVet Supplies</h1>
+        <nav>
+            <ul>
+                <li><a href="#" data-section="home">Home</a></li>
+                <li><a href="#" data-section="products">Products</a></li>
+                <li><a href="#" data-section="services">Services</a></li>
+                <li><a href="#" data-section="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to AgroVet</h2>
+            <p>Your trusted partner for agricultural and veterinary supplies.</p>
+        </section>
+        <section id="products" style="display:none;">
+            <h2>Our Products</h2>
+            <ul>
+                <li>Animal Feeds</li>
+                <li>Fertilizers</li>
+                <li>Veterinary Medicines</li>
+                <li>Farm Tools</li>
+            </ul>
+        </section>
+        <section id="services" style="display:none;">
+            <h2>Our Services</h2>
+            <p>We offer expert advice, delivery, and farm support.</p>
+        </section>
+        <section id="contact" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>Email: info@agrovet.com</p>
+            <p>Phone: +123-456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AgroVet Supplies. All rights reserved.</p>
+    </footer>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('data-section');
+                sections.forEach(sec => {
+                    sec.style.display = sec.id === target ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
