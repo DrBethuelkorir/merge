@@ -15,6 +15,7 @@
                 <li><a href="#" data-section="products">Products</a></li>
                 <li><a href="#" data-section="services">Services</a></li>
                 <li><a href="#" data-section="contact">Contact</a></li>
+                <li><a href="#" data-section="testimonials">Testimonials</a></li>
             </ul>
         </nav>
     </header>
@@ -38,12 +39,35 @@
         </section>
         <section id="contact" style="display:none;">
             <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
             <p>Email: info@agrovet.com</p>
             <p>Phone: +123-456-7890</p>
+        </section>
+        <section id="testimonials" style="display:none;">
+            <h2>Testimonials</h2>
+            <blockquote>
+                "AgroVet helped me improve my farm yields!" – Jane Doe
+            </blockquote>
+            <blockquote>
+                "Great products and fast delivery." – John Smith
+            </blockquote>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 AgroVet Supplies. All rights reserved.</p>
+        <form id="newsletterForm">
+            <label for="newsletterEmail">Subscribe to our newsletter:</label>
+            <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </footer>
     <script src="script.js"></script>
 </body>
